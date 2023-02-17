@@ -11,15 +11,7 @@ import 'package:url_strategy/url_strategy.dart';
 
 Future<void> main() async {
   setPathUrlStrategy();
-  if (kIsWeb) {
-    // initialiaze the facebook javascript SDK
-    await FacebookAuth.i.webInitialize(
-      appId: "5957229224301292",
-      cookie: true,
-      xfbml: true,
-      version: "v13.0",
-    );
-  }
+
   runApp(MyApp());
 }
 
@@ -41,12 +33,12 @@ class MyApp extends StatelessWidget {
             '/details': (context) => Details_view(),
             '/': (context) => Sign_in(),
           },
-          title: 'Get Access Token',
+          title: 'Social media',
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
-            primarySwatch: Colors.cyan,
+            primarySwatch: Colors.red,
+            fontFamily: 'ShantellSans',
           ),
-          // home: FacebookSignin(),
         ));
   }
 }

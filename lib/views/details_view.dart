@@ -44,15 +44,16 @@ class _Details_viewState extends State<Details_view> {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.only(
                 bottomRight: Radius.circular(120),
+                bottomLeft: Radius.circular(120),
               ),
               gradient: LinearGradient(
-                colors: [Colors.cyan[900]!, Colors.cyan[100]!],
+                colors: [Colors.red[200]!, Colors.red[900]!, Colors.red[200]!],
               ),
             ),
           ),
           centerTitle: true,
           title: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -87,16 +88,16 @@ class _Details_viewState extends State<Details_view> {
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  'We are not responsible for any bad behavior when using this app.',
-                  style: TextStyle(
-                      color: Colors.blueGrey,
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold),
-                ),
-              ),
+              // Padding(
+              //   padding: const EdgeInsets.all(8.0),
+              //   child: Text(
+              //     'We are not responsible for any bad behavior when using this app.',
+              //     style: TextStyle(
+              //         color: Colors.grey,
+              //         fontSize: 15,
+              //         fontWeight: FontWeight.bold),
+              //   ),
+              // ),
             ],
           ),
         ),
@@ -113,7 +114,7 @@ class _Details_viewState extends State<Details_view> {
                         ? ''
                         : 'Signed in successfully',
                     style: TextStyle(
-                        color: Colors.cyanAccent,
+                        color: Colors.redAccent,
                         fontSize: 16,
                         fontWeight: FontWeight.bold),
                   ),
@@ -141,14 +142,14 @@ class _Details_viewState extends State<Details_view> {
                     title: Text(
                       routeArg['name'],
                       style: TextStyle(
-                          color: Colors.cyan,
+                          color: Colors.red,
                           fontSize: 15,
                           fontWeight: FontWeight.bold),
                     ),
                     subtitle: Text(
                       routeArg['email'],
                       style: TextStyle(
-                        color: Colors.blueGrey,
+                        color: Colors.grey,
                         fontSize: 13,
                         fontWeight: FontWeight.w500,
                       ),
@@ -179,7 +180,7 @@ class _Details_viewState extends State<Details_view> {
                   // const SizedBox(
                   //   height: 5,
                   // ),
-                  Padding(
+                  /*  Padding(
                     padding: EdgeInsets.symmetric(
                       horizontal: mq.size.width * 0.1,
                       // vertical: mq.size.height * 0.1
@@ -187,7 +188,7 @@ class _Details_viewState extends State<Details_view> {
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        color: Colors.cyanAccent[100],
+                        color: Colors.redAccent[100],
                       ),
                       child: routeArg['accessToken'] == '' ||
                               routeArg['accessToken'] == null
@@ -196,7 +197,7 @@ class _Details_viewState extends State<Details_view> {
                               child: Text(
                                 'Please Sign out then Sign in to get new access token',
                                 style: TextStyle(
-                                    color: Colors.cyan[700],
+                                    color: Colors.red[700],
                                     fontSize: 15,
                                     fontWeight: FontWeight.w500),
                               ),
@@ -212,7 +213,7 @@ class _Details_viewState extends State<Details_view> {
                                       child: Text(
                                         'Access token: ',
                                         style: TextStyle(
-                                            color: Colors.cyan[800],
+                                            color: Colors.red[800],
                                             fontSize: 14,
                                             fontWeight: FontWeight.bold),
                                       ),
@@ -248,7 +249,7 @@ class _Details_viewState extends State<Details_view> {
                                                   ),
                                                 ],
                                               ),
-                                              backgroundColor: Colors.cyan,
+                                              backgroundColor: Colors.red,
                                               behavior:
                                                   SnackBarBehavior.floating,
                                               margin: EdgeInsets.symmetric(
@@ -261,7 +262,7 @@ class _Details_viewState extends State<Details_view> {
                                       },
                                       icon: Icon(
                                         Icons.copy_all_sharp,
-                                        color: Colors.cyan[800],
+                                        color: Colors.red[800],
                                       ),
                                     ),
                                   ],
@@ -277,7 +278,7 @@ class _Details_viewState extends State<Details_view> {
                                         cut: true,
                                         paste: true),
                                     style: TextStyle(
-                                        color: Colors.cyan[600],
+                                        color: Colors.red[600],
                                         fontSize: 15,
                                         fontWeight: FontWeight.w500),
                                   ),
@@ -285,7 +286,7 @@ class _Details_viewState extends State<Details_view> {
                               ],
                             ),
                     ),
-                  ),
+                  ),*/
                   const SizedBox(
                     height: 20,
                   ),
